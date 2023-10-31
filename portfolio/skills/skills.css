@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #3498db; */
+    background: url('white-cubes-3d-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 1500px;
+    color: #0b0b0b;
+    background-attachment: scroll;
+}
+
+.myPic {
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Use a percentage for border-radius to ensure circular shape */
+    float: right;
+}
+
+.hi {
+    margin-top: 60px;
+}
+
+.myInfo {
+    max-width: 100%; /* Make sure the content does not overflow on smaller screens */
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 2px 3px;
+    justify-content: center;
+}
+
+nav ul li {
+    border-radius: 5px;
+    margin: 10px 20px;
+    transition: transform 0.1s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust padding for better responsiveness */
+    color: #060606;
+    font-size: 17px;
+    justify-content: center;
+}
+
+.navlogo {
+    height: 4px;
+    width: 23px;
+}
+
+.social-button {
+    position: relative;
+    display: inline-block;
+}
+
+.main-button {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 20px; /* Adjust padding for better responsiveness */
+    font-size: 16px;
+    background-color: rgb(58, 54, 54);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #3498db;
+}
+
+.options {
+    position: absolute;
+    width: 202px;
+    top: 100%;
+    margin-left: 10px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.social-button:hover .options {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.card {
+    list-style: none;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: calc(30% - 20px);
+    padding: 20px;
+    margin: 10px;
+}
+
+.java, .cpp, .dsa, .html, .css, .oops, .android {
+    text-align: center;
+    justify-content: center;
+    width: 100%; /* Full width on small screens */
+    padding: 20px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.ts {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+@media screen and (max-width: 1057px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center; /* Center-align text on smaller screens */
+    }
+    .myPic {
+        float: none; /* Clear the float on smaller screens */
+        margin: 0 auto; /* Center-align the image */
+    }
+    .myInfo {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        padding: 10px 40px; /* Adjust padding for better touch interactions on smaller screens */
+    }
+}
+/* Media queries for responsive design */
+@media screen and (min-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: calc(33.33% - 20px); /* 3 cards per row on large screens */
+    }
+    
+}
+
+/* Add more media queries as needed for different screen sizes. */
